@@ -6,6 +6,37 @@
     <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
     <title>Document</title>
     <style>
+        @media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+  }
+}
+        [class*="col-"] {
+  float: left;
+  padding: 15px;
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+        *{
+            box-sizing: border-box;
+        }
         body{
             font-family: 'Ubuntu', sans-serif;
             color: white;
@@ -14,7 +45,7 @@
         .navbar{
             border: 0.1px solid black;
            
-            font-size:30px;
+            font-size:200%;
             color: white;
             background-color: black;
         }
@@ -29,57 +60,59 @@
         }
         .navbar li a{
             float:right;
-            
-            padding-left: 20px;
-            padding-right: 20px;
+            overflow: auto;
+            padding-left: 3%;
+            padding-right: 3%;
             text-decoration: none;
         }
         .navbar li img{
             float: right;
-            padding-left: 20px;
-            padding-right: 20px;
+            padding-left: 3%;
+            padding-right: 3%;
+            overflow: auto;
         }
         #middletext{
             border: 0.1px black;
             
             
             font-size: 50px;
-            padding-left: 150px;
+            padding-left: 8%;
         }
         #middletext1{
             border: 0.1px black;
             
             
             font-size: 50px;
-            padding-left: 169px;
+            padding-left: 10%;
         }
         #name{
             border: 0.1px black;
             
         
             font-size: 40px;
-            padding-left: 150px;
+            padding-left: 8%;
         }
         #projects{
             border: 0.1px black;
             
             
             font-size: 40px;
-            padding-left: 638px;
+            padding-left: 50%;
         }
         #downarrow{
             border: 0.1px black;
             background-color: black;
             
             
-            padding-left: 685px;
+            padding-left: 25%;
+            margin-left: 27%;
         }
         #picture1{
             border: 0.1px black;
             padding-top: 100px;
             float: right;
-            padding-right: 137px;
-            margin-top: -225px;
+            padding-right: 9%;
+            margin-top: -15%;
             overflow: auto;
         }
         .element {
@@ -101,6 +134,7 @@
     color:red;
   }
 }
+
     </style>
 </head>
 <body>
@@ -109,25 +143,28 @@
             <ul>
                 <li id="logo" class="element">AD</li>
                 <li><a href="">Resume</a></li>
-                <li><img src="Picture2.png" alt="" height="40px" width="40px"></li>
-                <li><img src="Picture3.png" alt="" height="40px" width="40px"></li>
+                <li><img src="Picture2.png" alt="" height="6%" width="10%"></li>
+                <li><img src="Picture3.png" alt="" height="6%" width="10%"></li>
             </ul>
         </nav>
     </header>
     <br>
     <br>
     <br><br><br><br><br><br>
-    <span id="middletext">
-          I create <span class="element">playful</span>
+    <span id="middletext" class="col-5">
+          I create <span class="element" class="col-5">playful</span>
     </span>
     <br>
-    <span id="middletext1">experiences</span>
-    <img src="Picture1.png" alt="" height="300px" width="300px" id="picture1">
+    <br>
+    <br><br><br>
+    <span id="middletext1" class="col-5">experiences</span>
+    <img src="Picture1.png" alt="" height="30%" width="30%" id="picture1">
     <br><br><br><br><br><br><br><br>
-    <span id="name">Aryan Dalvi/Software Developer</span>
+    <span id="name" class="col-6">Aryan Dalvi/Software Developer</span>
     <br><br><br><br>
-    <span id="projects">Projects</span>
+    <br>
+    <span id="projects" class="col-6">Projects</span>
     <br><br>
-    <img src="Picture4.png" alt="" id="downarrow" height="40px" width="75px">
+    <img src="Picture4.png" alt="" id="downarrow" height="27%" width="27%" class="col-4">
 </body>
 </html>
