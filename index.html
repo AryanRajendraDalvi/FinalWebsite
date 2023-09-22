@@ -6,33 +6,140 @@
     <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
     <title>Document</title>
     <style>
-        @media only screen and (max-width: 768px) {
-  /* For mobile phones: */
-  [class*="col-"] {
-    width: 100%;
+       @media only screen and (max-width: 7cm) {
+  div.main {
+    font-size: 35px;
   }
 }
-        [class*="col-"] {
-  float: left;
-  padding: 15px;
+
+@media only screen and (max-width: 950px) {
+  div.main {
+    font-size: 25px;
+    padding: 15% 10%;
+  }
+
+  div .img {
+    height: 230px;
+    width: 200px;
+  }
+
+  a {
+    font-size: 20px;
+  }
+
+  div .logo {
+    font-size: 20px;
+  }
+
+  nav li .icon {
+    height: 40px;
+    width: 40px;
+  }
 }
 
-.col-1 {width: 8.33%;}
-.col-2 {width: 16.66%;}
-.col-3 {width: 25%;}
-.col-4 {width: 33.33%;}
-.col-5 {width: 41.66%;}
-.col-6 {width: 50%;}
-.col-7 {width: 58.33%;}
-.col-8 {width: 66.66%;}
-.col-9 {width: 75%;}
-.col-10 {width: 83.33%;}
-.col-11 {width: 91.66%;}
-.col-12 {width: 100%;}
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
+@media only screen and (max-width: 720px) {
+  div.main {
+    font-size: 20px;
+    padding: 15% 10%;
+  }
+
+  div .img {
+    height: 200px;
+    width: 200px;
+  }
+
+  nav li .icon {
+    height: 30px;
+    width: 30px;
+  }
+
+  p {
+    padding-left: 10%;
+    font-size: 20px;
+  }
+
+  button {
+    font-size: 15px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  div.main {
+    font-size: 15px;
+    padding: 15% 10%;
+  }
+
+  div .img {
+    height: 160px;
+    width: 160px;
+  }
+
+  nav li .icon {
+    height: 30px;
+    width: 30px;
+  }
+
+  p {
+    padding-left: 10%;
+    font-size: 15px;
+  }
+
+  button {
+    font-size: 12px;
+  }
+
+  a {
+    font-size: 15px;
+  }
+
+  div .logo {
+    font-size: 15px;
+  }
+
+  nav li .icon {
+    height: 25px;
+    width: 25px;
+  }
+
+  nav li a {
+    padding: 0 20px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  header {
+    padding: 0;
+    width: 100%;
+  }
+
+  div.main {
+    font-size: 15px;
+    padding: 30% 0 10% 0;
+  }
+
+  div .img {
+    height: 75px;
+    width: 75px;
+  }
+
+  p {
+    font-size: 10px;
+    padding: 0;
+  }
+
+  button {
+    font-size: 10px;
+    margin-left: 45%;
+  }
+
+  button .arrow {
+    height: 5px;
+    width: 15px;
+  }
+
+  nav li a {
+    padding: 0 10px;
+  }
 }
         *{
             box-sizing: border-box;
@@ -71,12 +178,13 @@
             padding-right: 3%;
             overflow: auto;
         }
-        #middletext{
-            border: 0.1px black;
-            
-            
-            font-size: 50px;
-            padding-left: 5%;
+        #main{
+            display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 30px;
+    padding: 5% 10%;
+    flex-wrap: nowrap;
         }
         #middletext1{
             border: 0.1px black;
@@ -108,12 +216,8 @@
             margin-left: 27%;
         }
         #picture1{
-            border: 0.1px black;
-            padding-top: 18px;
-            float: right;
-            padding-right: 9%;
-            margin-top: -35%;
-            overflow: auto;
+            height: 300px;
+    width: 300px;
         }
         .element {
   width: 100%;
@@ -151,22 +255,23 @@
     <br>
     <br>
     <br><br><br><br><br><br>
-    <span id="middletext" >
-          <span class="col-4">I create<span class="element"> playful </span><br> experiences</span> 
-          <br><br><br><br><span class="col-7">Aryan Dalvi/Software Developer</span>
-          <br><br><br> <span id="projects" class="col-4">Projects</span>
-    </span>
-    
+    <div id="main" >
+          <h1>I create<span class="element"> playful </span><br> experiences</span> </h1>
+          <img src="Picture1.png" alt="" height="30%" width="30%" id="picture1" >
+          
+    </div>
+    <br><br><br><br><h1 class="col-7">Aryan Dalvi/Software Developer</h1>
+    <br><br><br> <span id="projects">Projects</span>
     <!-- <br>
     <br><br><br><br><br><br> -->
     <!-- <span id="middletext1" class="col-2">experiences</span> -->
-    <img src="Picture1.png" alt="" height="30%" width="30%" id="picture1" class="col-4">
-  
+   
+    <!-- <br><br><br><br><br><br><br><br> -->
     <!-- <span id="name" class="col-6">Aryan Dalvi/Software Developer</span> -->
     <!-- <br><br><br><br>
     <br> -->
    
     <br><br>
-    <img src="Picture4.png" alt="" id="downarrow" height="27%" width="27%">
+    <img src="Picture4.png" alt="" id="downarrow" height="27%" width="27%" class="col-3">
 </body>
 </html>
