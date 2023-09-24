@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+     <!-- Typing Animation -->
+     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+     <!-- Linking JavaScript File -->
+ 
+     <link rel="stylesheet" href="'https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" >
+ 
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
     <title>Document</title>
     <style>
       /* Media Queries */
@@ -46,11 +54,11 @@
 }
 
 @media only screen and (max-width: 991px) {
-  .nav-links ul li {
+  .navbar ul li {
     display: block;
   }
 
-  .nav-links ul li a:hover {
+  .navbar ul li a:hover {
     font-size: 2rem;
     color: rgb(0, 204, 255);
   }
@@ -59,7 +67,7 @@
     z-index: 1000;
   }
 
-  .nav-links {
+  .navbar{
     position: absolute;
     top: -120rem;
     left: 0;
@@ -75,7 +83,7 @@
     transition: 1s;
   }
 
-  .navLinks_open {
+  .navbar_open {
     top: 0;
   }
 
@@ -86,12 +94,12 @@
     cursor: pointer;
   }
 
-  .nav-links ul {
+  .navbar ul {
     margin-top: 40px;
     padding: 50px 30px 30px 0px;
   }
 
-  .nav-links ul li a {
+  .navbar ul li a {
     font-size: 2rem;
   }
 
@@ -114,15 +122,15 @@
 }
 
 @media only screen and (max-width: 768px) {
-  .nav-links ul {
+  .navbar ul {
     padding-top: 1rem;
   }
 
-  .nav-links ul li a {
+  .navbar ul li a {
     font-size: 1.5rem;
   }
 
-  .content {
+  #main {
     flex-direction: column-reverse;
     text-align: center;
   }
@@ -153,7 +161,7 @@
     padding: 1.5rem 3rem;
   }
 
-  .nav-links ul li a {
+  .navbar ul li a {
     font-size: 1rem;
   }
 
@@ -295,7 +303,7 @@
 </head>
 <body>
     <header>
-        <nav class="navbar">
+        <nav class="navbar" id="navbar">
             <ul>
                 <li id="logo" class="name" class="col-2">AD</li>
                 <li><a href="" id="resume">Resume</a></li>
@@ -313,7 +321,7 @@
           <img src="Picture1.png" alt="" height="30%" width="30%" id="picture1" >
           
     </div>
-    <br><br><br><br><h1 class="col-7">Aryan Dalvi/Software Developer</h1>
+    <br><br><br><br><h1 class="col-7">Aryan Dalvi/ <span class="typing"></span></h1>
     <br><br><br> <span id="projects">Projects</span>
     <!-- <br>
     <br><br><br><br><br><br> -->
@@ -326,5 +334,34 @@
    
     <br><br>
     <img src="Picture4.png" alt="" id="downarrow" height="27%" width="27%" class="col-3">
+    <script>
+
+    function ToggleMenu(){
+        var element = document.getElementById("navbar");
+
+        if (element.classList.contains("navbar_open")){
+            element.classList.remove("navbar_open");
+        } else {
+            element.classList.add("navbar_open");
+        }
+
+    }
+
+// JavaSript for Typing Animation
+
+var typed = new Typed(".typing", {
+    strings: ["Student", "Web Developer", "Programmer"],
+    typeSpeed: 150,
+    backSpeed: 100,
+    loop: true
+});
+
+
+
+</script>
+
+<script src="main.js"></script>
+
+<script src="https://kit.fontawesome.com/664bbbfa49.js" crossorigin="anonymous"></script>
 </body>
 </html>
